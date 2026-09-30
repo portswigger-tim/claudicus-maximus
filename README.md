@@ -9,7 +9,7 @@ A Claude Code plugin with one skill, `plain-english-writing`. It helps Claude wr
 - `skills/plain-english-writing/references/ste-and-style.md` – the full rule list, with the reason for each rule
 - `evals/` – eval cases for `claude plugin eval` (one folder per case)
 - `evals-bash/` – eval cases that need Bash (run separately)
-- `tests/` – unit tests for the readability script (`python3 -m unittest discover -s tests`)
+- `tests/` – unit tests for the readability script (`python3 -m unittest discover -s tests`) and `tests/trigger/`, which measures how often the skill fires on its own
 
 ## Try it locally
 
@@ -31,7 +31,13 @@ The `readability-script` case needs Bash, so it lives in `evals-bash/` and is no
 claude plugin eval . --eval-dir evals-bash --ablation none --allow-tools "Bash(python3 *)"
 ```
 
-Bash evals run in a sandbox. They refuse to run if `~/.docker` holds a symbolic link (the harness says so). Keep the store's contents in one plain directory to fix that.
+Bash evals run in a sandbox. The harness refuses to run them if a credential store such as `~/.docker` holds a symbolic link. On a Mac with Docker Desktop, in Claude Code 2.1.280, the links in `~/.docker/bin` trigger this ([anthropics/claude-code#94308](https://github.com/anthropics/claude-code/issues/94308)). A temporary workaround is to move `bin` *outside* `~/.docker` for the run and put it back afterwards. Renaming it inside `~/.docker` does not help.
+
+```bash
+mv ~/.docker/bin ~/.docker-bin-parked; claude plugin eval . --eval-dir evals-bash --ablation none --allow-tools "Bash(python3 *)"; mv ~/.docker-bin-parked ~/.docker/bin
+```
+
+Docker Desktop keeps its tool links in `bin`, so restore it even if the eval fails. Check with `ls ~/.docker/bin`.
 
 Drop `--ablation none` to also run each case without the plugin and see the difference.
 
