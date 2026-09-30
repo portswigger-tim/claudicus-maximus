@@ -1,6 +1,6 @@
 ---
 name: plain-english-writing
-description: Write and edit clear, plain English. Use it whenever you write, edit, rewrite or proofread text, even a single sentence, and for docs, READMEs, guides, error messages and release notes.
+description: Write and edit clear, plain English. Use it whenever you write, edit, rewrite or proofread text, even a single sentence: docs, READMEs, guides, explanations, error messages, release notes, emails and chat messages.
 ---
 
 # Plain English writing
@@ -98,6 +98,9 @@ Order of priority: accuracy and the reader's task, then the project's own style 
 - [ ] Each step has one action, in order, with the expected result.
 - [ ] Sentences are short, active and free of filler.
 - [ ] Links say where they go. Code and commands can be copied and run.
+- [ ] For a documentation page of about 150 words or more, the readability check is run and its targets are met, or the miss is explained.
+
+**Readability check.** For a documentation page of about 150 words or more (not a reference page), run the script `scripts/readability.py` in this skill's folder on your draft. It reads a file or standard input, ignores code, and prints Reading Ease, grade level and the longest sentences. The targets are Reading Ease 40 or higher and grade 10 or lower. If you miss a target, shorten the longest sentences it lists and run it once more. The score is a check, not a goal, and meaning comes first. If you keep a miss on purpose, for example in a technical explanation, say so in your report.
 
 When you edit existing text, keep the author's meaning and facts. Do not add actions, commands or names that the original does not state. Fix the structure first, then the sentences, then the words. Ask, or mark the gap with `TODO`, instead of inventing facts.
 

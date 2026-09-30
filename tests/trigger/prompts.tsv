@@ -1,0 +1,10 @@
+pos-readme	Write a README for a small CLI tool that renames files in bulk. Reply with only the README.
+pos-explain	Draft a short explanation page on why we use feature flags instead of long-lived branches. Reply with only the page.
+pos-tidy	Tidy this paragraph: "Due to the fact that the build was broken, it was decided by the team that deployment would be postponed until such time as the issue is resolved."
+pos-release	Write a release note for version 2.3: it adds CSV export and fixes a login timeout bug.
+pos-error	Rewrite this error message so users understand it: "Error 500: operation failed unexpectedly. Contact admin."
+pos-howto	Write a how-to guide for resetting a user's password from our admin panel. Reply with only the guide.
+pos-proof	Proofread this: "Their are three step's to setup the tool and its really easy to do."
+pos-slack	Write a Slack message telling the team that staging is down for maintenance tonight from 10pm.
+neg-git	What does git rebase -i do?
+neg-code	Why does this loop raise an IndexError: for i in range(len(xs) + 1): print(xs[i])
