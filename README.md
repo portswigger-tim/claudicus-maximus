@@ -4,12 +4,31 @@ A Claude Code plugin with one skill, `plain-english-writing`. It helps Claude wr
 
 ## Layout
 
-- `.claude-plugin/plugin.json` – manifest
+- `.claude-plugin/plugin.json` – plugin manifest
+- `.claude-plugin/marketplace.json` – marketplace manifest, so the repository can be added as a marketplace
 - `skills/plain-english-writing/SKILL.md` – the skill
 - `skills/plain-english-writing/references/ste-and-style.md` – the full rule list, with the reason for each rule
 - `evals/` – eval cases for `claude plugin eval` (one folder per case)
 - `evals-bash/` – eval cases that need Bash (run separately)
 - `tests/` – unit tests for the readability script (`python3 -m unittest discover -s tests`) and `tests/trigger/`, which measures how often the skill fires on its own
+
+## Install
+
+This repository is also a plugin marketplace. In Claude Code:
+
+```
+/plugin marketplace add portswigger-tim/claudicus-maximus
+/plugin install claudicus-maximus@claudicus-maximus
+```
+
+Or from a terminal:
+
+```bash
+claude plugin marketplace add portswigger-tim/claudicus-maximus
+claude plugin install claudicus-maximus@claudicus-maximus
+```
+
+Use `/plugin marketplace update` to pick up new versions. The skill runs on its own when you write or edit text. You can also call it by name: `/claudicus-maximus:plain-english-writing`.
 
 ## Try it locally
 

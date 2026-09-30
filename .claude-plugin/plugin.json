@@ -1,9 +1,13 @@
 {
   "name": "claudicus-maximus",
   "version": "0.1.0",
-  "description": "Claudicus Maximus - a Claude Code plugin.",
+  "description": "Helps Claude write clear documentation and other prose in plain English, using Diataxis, ASD-STE100, Strunk and gov.uk guidance.",
   "author": {
     "name": "Tim Birkett",
     "email": "tim.birkett@portswigger.net"
-  }
+  },
+  "homepage": "https://github.com/portswigger-tim/claudicus-maximus",
+  "repository": "https://github.com/portswigger-tim/claudicus-maximus",
+  "license": "MIT",
+  "keywords": ["writing", "documentation", "plain-english", "diataxis", "style"]
 }

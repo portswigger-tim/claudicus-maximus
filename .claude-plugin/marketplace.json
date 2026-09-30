@@ -1,0 +1,25 @@
+{
+  "name": "claudicus-maximus",
+  "owner": {
+    "name": "Tim Birkett",
+    "email": "tim.birkett@portswigger.net"
+  },
+  "metadata": {
+    "description": "Plugins by Tim Birkett for writing clear documentation and prose."
+  },
+  "plugins": [
+    {
+      "name": "claudicus-maximus",
+      "source": "./",
+      "description": "Helps Claude write clear documentation and other prose in plain English, using Diataxis, ASD-STE100, Strunk and gov.uk guidance.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tim Birkett",
+        "email": "tim.birkett@portswigger.net"
+      },
+      "license": "MIT",
+      "keywords": ["writing", "documentation", "plain-english", "diataxis", "style"],
+      "category": "productivity"
+    }
+  ]
+}
