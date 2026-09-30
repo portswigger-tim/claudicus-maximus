@@ -1,0 +1,9 @@
+{
+  "name": "claudicus-maximus",
+  "version": "0.1.0",
+  "description": "Claudicus Maximus - a Claude Code plugin.",
+  "author": {
+    "name": "Tim Birkett",
+    "email": "tim.birkett@portswigger.net"
+  }
+}
